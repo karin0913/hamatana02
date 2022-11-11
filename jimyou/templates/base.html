@@ -10,15 +10,24 @@
     <meta name="description" content="Stream - Bootstrap 4 UI Kit">
     <meta name="author" content="htmlstream.com">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" href="{% static '/assets/favicon.ico' %}"/>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/assets/favicon.ico'%}"/>
+
     <!-- Web Fonts -->
-    <link href="//fonts.googleapis.com/css?family=Playfair+Display:400,700%7COpen+Sans:300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Playfair+Display:400,700%7COpen+Sans:300,400,600,700" rel="stylesheet">
+
     <!-- Bootstrap Styles -->
-    <link rel="stylesheet" type="text/css" href="{% static '/assets/vendors/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/assets/vendors/bootstrap/css/bootstrap.min.css'%}"/>
     <!-- Components Vendor Styles -->
-    <link rel="stylesheet" type="text/css" href="{% static '/assets/vendors/font-awesome/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/assets/vendors/font-awesome/css/fontawesome-all.min.css'%}"/>
     <!-- Theme Styles -->
-    <link rel="stylesheet" type="text/css" href="{% static '/assets/css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/assets/css/styles.css'%}"/>
+    <link rel="stylesheet" type="text/css" href="{% static '/flip-master/example/flip/flip.min.css'%}"/>
+
+    <!-- My styles -->
+
+
+    
+
     <!-- Demo Custome Code (demo page only) -->
     <style type="text/css">
       /* Button Spaces*/
@@ -63,6 +72,32 @@
     </style>
   </head>
   {% endblock %}
-  {% block contents %}{% endblock %}
+<body id="js-home">
+
+  {% block contents %}
+
+    <!-- JAVASCRIPTS (Load javascripts at bottom, this will reduce page load time) -->
+    <!-- Global Vendor -->
+    <script type="text/javascript" src="{% static '/assets/vendors/jquery.min.js'%}"></script>
+    <script type="text/javascript" src="{% static '/assets/vendors/jquery.migrate.min.js'%}"></script>
+    <script type="text/javascript" src="{% static '/assets/vendors/popper.min.js'%}"></script>
+    <script type="text/javascript" src="{% static '/assets/vendors/bootstrap/js/bootstrap.min.js'%}"></script>
+
+    <!-- Components Vendor  -->
+    <script type="text/javascript" src="{% static '/assets/vendors/jquery.parallax.js'%}"></script>
+    <script type="text/javascript" src="{% static '/assets/vendors/typedjs/typed.min.js'%}"></script>
+    <script type="text/javascript" src="{% static '/assets/vendors/slick-carousel/slick.min.js'%}"></script>
+    <script type="text/javascript" src="{% static '/assets/vendors/counters/waypoint.min.js'%}"></script>
+    <script type="text/javascript" src="{% static '/assets/vendors/counters/counterup.min.js'%}"></script>
+
+    <!-- Theme Settings and Calls -->
+    <script type="text/javascript" src="{% static '/assets/js/global.js'%}"></script>
+
+    <!-- Theme Components and Settings -->
+    <script type="text/javascript" src="{% static '/assets/js/vendors/parallax.js'%}"></script>
+    <script type="text/javascript" src="{% static '/assets/js/vendors/carousel.js'%}"></script>
+    <script type="text/javascript" src="{% static '/assets/js/vendors/counters.js'%}"></script>
+    <!-- END JAVASCRIPTS -->
 </body>
 </html>
+{% endblock %}
